@@ -1,0 +1,184 @@
+@import "../../../Utils/variables.less";
+.recent {
+  padding: @page-left-right-paddings;
+  background-color: #f0f3fa;
+  .container-premium2 {
+    display: flex;
+    justify-content: space-between;
+    select{
+      padding:2vmin;
+     border: 1px solid #E9E8EE;
+     color: #95979F;
+    }
+    .h2-premium {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 43px;
+      color: #484b5e;
+    }
+  }
+  .container-premium {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card {
+      display: flex;
+      margin-top: 5rem;
+      justify-content: center;
+      width: 16rem;
+
+      &:hover {
+        .card2 {
+          transform: rotateY(180deg);
+        }
+      }
+      .flip-box-front {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      .flip-box-back {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        background-color: #e9e8ee;
+        height: 100%;
+        position: relative;
+        top: -93%;
+        h2{
+          text-align: center;
+          position: relative;
+          top: 10rem;
+          font-weight: 600;
+          font-size: 25px;
+          color:#484b5e;
+          
+          
+        }
+      }
+      .card2 {
+        width: 13rem;
+        background-color: white;
+        border-radius: 4px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        &:hover{
+          cursor: pointer;
+        }
+        .img-premium {
+          border-radius: 4px 4px 0 0;
+        }
+        .card-bottom {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 2vmin;
+          height: 10rem;
+          .h3-premium {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 21px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            color: #656569;
+          }
+          .p-premium {
+            font-family: DM Sans;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0.04em;
+            text-align: left;
+            color: #979798;
+          }
+          .price-premium {
+            text-align: end;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0px;
+            color: #484b5e;
+          }
+        }
+      }
+      .card3 {
+        background-color: white;
+        width: 13rem;
+        border-radius: 4px;
+        .img-crown {
+          display: block;
+          margin: 3rem auto;
+        }
+        .p1 {
+          font-family: DM Sans;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 23px;
+          letter-spacing: 0.03em;
+          text-align: left;
+          color: #656569;
+          padding-left: 2vmin;
+          padding-top: 2rem;
+        }
+        .p2 {
+          padding-left: 2vmin;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          font-size: 19px;
+          font-weight: 600;
+          color: #484b5e;
+          .span1 {
+            font-family: DM Sans;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0px;
+            text-align: left;
+          }
+        }
+        .btn-premium {
+          width: 90%;
+          display: block;
+          margin: 0.5rem auto;
+          height: 45px;
+          background-color: #6a5bcd;
+          border: none;
+          color: white;
+          font-family: DM Sans;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 21px;
+          letter-spacing: 0.05em;
+          text-align: center;
+          border-radius: 5px;
+          transition: 0.5s all ease-in-out;
+          &:hover {
+            background-color: #442fcf;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .allsee {
+    display: block;
+    margin: 4rem auto;
+    text-align: center;
+    width: 30%;
+    height: 66px;
+    border-radius: 5px;
+    background-color: #e9e8ee;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #484b5e;
+    transition: 0.5s all ease-in-out;
+    &:hover{
+      background-color: #484b5e;
+      color: whitesmoke;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "../../../Utils/variables.less";
+.edit-head {
+  padding: @page-left-right-paddings;
+  background-color: #f0f3fa;
+  h2 {
+    padding-top: 10rem;
+    font-family: DM Sans;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #484b5e;
+  }
+
+  .container-edit {
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    margin-top: 3rem;
+    div {
+      h3 {
+        font-family: DM Sans;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #979798;
+      }
+      p {
+        margin-top: 1rem;
+        color: #484b5e;
+        font-size: 23px;
+        font-weight: 550;
+      }
+      .p-con {
+        color: red;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .container-edit {
+    flex-direction: column;
+    width: 100% !important;
+    div {
+      margin-top: 1rem !important;
+      p {
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .container-edit {
+    width: 100% !important;
+  }
+}

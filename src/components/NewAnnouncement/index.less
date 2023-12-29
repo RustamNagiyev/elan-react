@@ -1,0 +1,152 @@
+@import "../../Utils/variables.less";
+.new-announcement {
+
+  background-color: #f0f3fa;
+ 
+  .main-part {
+    width: 80%;
+    .btn-createAd {
+      width: 247px;
+      height: 59px;
+      border-radius: 5px;
+      gap: 10px;
+      font-size: 20px;
+      color: whitesmoke;
+      background-color: #6a5bcd;
+      border: none;
+      transition: 0.3s all ease-in-out;
+      margin-top: 6rem;
+      &:hover {
+        background-color: #3a2d94;
+        cursor: pointer;
+      }
+    }
+    .h2-other {
+      padding-top: 2rem;
+      color: #484b5e;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+    .add-inputs {
+      display: flex;
+      justify-content: space-between;
+      div {
+        width: 70vmin;
+      }
+    }
+    .email-input {
+      background-color: #ffffff;
+      border-radius: 5px;
+      width: 100%;
+      height: 4rem;
+      padding-left: 1rem;
+      font-size: 20px;
+      margin-top: 1rem;
+      border: 1px solid #e7eae7;
+    }
+    .p-all {
+      font-family: DM Sans;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: #aba9b7;
+      padding-top: 2.5rem;
+    }
+    .name-ad-input {
+      background-color: #ffffff;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+      height: 4rem;
+      padding-left: 1rem;
+      font-size: 20px;
+      margin-top: 1rem;
+      border: 1px solid #e7eae7;
+    }
+    .container-productAbout {
+        display: flex;
+      justify-content: space-between;
+      .left {
+    width: 70vmin;
+        select {
+          width: 100%;
+          height: 4rem;
+          font-size: 20px;
+          border: 1px solid #e7eae7;
+          border-radius: 5px;
+          background-color: #ffffff;
+          color: #807f82;
+          padding-left: 1rem;
+          margin-top: 1rem;
+        }
+      }
+      .right {
+       width: 70vmin;
+       
+        select {
+          width: 100%;
+          height: 4rem;
+          font-size: 20px;
+          border: 1px solid #e7eae7;
+          border-radius: 5px;
+          background-color: #ffffff;
+          color: #807f82;
+          padding-left: 1rem;
+          margin-top: 1rem;
+        }
+        .text-input{
+            background-color: #ffffff;
+            border-radius: 5px;
+            width: 100%;
+            height: 12.6rem;
+            padding-left: 1rem;
+            font-size: 20px;
+            margin-top: 1rem;
+            border: 1px solid #e7eae7;
+            
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+ .new-announcement{
+  .email-input{
+  font-size: 15px !important;
+ }
+ .add-inputs{
+  flex-direction: column;
+  div{
+    width: 100% !important;
+  }
+ }
+ .container-productAbout{
+  flex-direction: column;
+ }
+ .left{
+  width: 100% !important;
+ }
+ .right{
+  width: 100% !important;
+ }
+ .btn-createAd{
+  display: block;
+  margin: 6rem auto !important;
+ }
+}
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+
+
+}
+
+@media only screen and (max-width: 1040px) {
+ .main-part{
+  width: 100% !important;
+ }
+}

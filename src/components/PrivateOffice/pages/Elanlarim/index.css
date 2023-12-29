@@ -1,0 +1,98 @@
+.my .container-my {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: normal !important;
+}
+.my .container-my .card {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  width: 16rem;
+}
+.my .container-my .card:hover .card2 {
+  transform: rotateY(180deg);
+}
+.my .container-my .card .flip-box-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.my .container-my .card .flip-box-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background-color: #e9e8ee;
+  height: 100%;
+  position: relative;
+  top: -82% !important;
+  padding: 5px 15px !important;
+  border-radius: 5px;
+}
+.my .container-my .card .flip-box-back h2 {
+  text-align: center;
+  position: relative;
+  top: 10rem;
+  font-weight: 600;
+  font-size: 25px;
+  color: #484b5e;
+}
+.my .container-my .card .flip-box-back img {
+  float: right;
+}
+.my .container-my .card .card2 {
+  width: 13rem;
+  background-color: white;
+  border-radius: 4px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.my .container-my .card .card2:hover {
+  cursor: pointer;
+}
+.my .container-my .card .card2 .img-premium {
+  border-radius: 4px 4px 0 0;
+}
+.my .container-my .card .card2 .card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 2vmin;
+  height: 7rem;
+}
+.my .container-my .card .card2 .card-bottom .h3-premium {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #656569;
+}
+.my .container-my .card .card2 .card-bottom .p-premium {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #979798;
+}
+.my .container-my .card .card2 .card-bottom div {
+  display: flex;
+  justify-content: end;
+}
+.my .container-my .card .card2 .card-bottom div .price-premium {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #484b5e;
+}
+@media only screen and (min-width: 300px) and (max-width: 629px) {
+  .my .container-my {
+    justify-content: center !important;
+  }
+}
+@media only screen and (min-width: 630px) and (max-width: 1255px) {
+  .my .container-my {
+    justify-content: space-between !important;
+  }
+}

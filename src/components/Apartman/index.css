@@ -1,0 +1,138 @@
+.apartman {
+  background-color: #EFF3FA;
+  padding: 7vmin;
+}
+.apartman .container-apart {
+  padding-top: 11rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.apartman .container-apart h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0.02em;
+  color: #484B5E;
+}
+.apartman .container-apart p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #979798;
+}
+.apartman .container-apart p span {
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  padding-left: 1vmin;
+  color: #484B5E;
+}
+.apartman .container-apart-second {
+  margin-top: 2rem;
+  padding-top: 4vmin;
+  padding-bottom: 4vmin;
+  background-color: white;
+}
+.apartman .container-apart-second .bottom {
+  display: flex;
+  padding: 6vmin;
+}
+.apartman .container-apart-second .bottom .search-apartman {
+  height: 3rem;
+  width: 17rem;
+  font-size: 18px;
+  padding-left: 1rem;
+  background-color: #EFF3FA;
+  color: #ABA9B7;
+  border: 1px solid #ABA9B7;
+  border-radius: 5px;
+}
+.apartman .container-apart-second .bottom .search-icon {
+  position: relative;
+  top: 0;
+  right: 30px;
+}
+.apartman .container-apart-second .bottom .select-apartman {
+  margin-left: 10vmin;
+  width: 17rem;
+  font-size: 18px;
+  padding-left: 1rem;
+  background-color: #EFF3FA;
+  color: #ABA9B7;
+  border: 1px solid #ABA9B7;
+  border-radius: 5px;
+}
+.apartman .container-apart-second .flexable-apart {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #F3F4FF;
+}
+.apartman .container-apart-second .flexable-apart div {
+  padding: 3vmin;
+  width: 25%;
+}
+.apartman .container-apart-second .flexable-apart div div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.apartman .container-apart-second .flexable-apart div div p {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #979798;
+}
+.apartman .container-apart-second .flexable-apart div div span {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #484B5E;
+  padding-left: 5vmin;
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-icon {
+    display: none;
+  }
+  .select-apartman {
+    margin: 1rem 0 0 0 !important;
+    padding: 2vmin !important;
+  }
+  .flexable-apart {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 350px;
+    overflow-y: scroll;
+    justify-content: space-between;
+  }
+  .flexable-apart div {
+    width: 35% !important;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .bottom {
+    padding: 6vmin 0 6vmin 0;
+    justify-content: space-around;
+  }
+  .select-apartman {
+    padding: 0 !important;
+    margin-left: 2vmin !important;
+  }
+  .search-apartman {
+    padding: 0 !important;
+  }
+  .flexable-apart {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 350px;
+    overflow-y: scroll;
+  }
+}

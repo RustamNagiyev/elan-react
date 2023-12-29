@@ -1,0 +1,152 @@
+.level-up {
+  padding: 7vmin;
+  background-color: #f0f3fa;
+}
+.level-up .my-pocket {
+  font-family: DM Sans;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 33px;
+  color: #656569;
+  margin-top: 5rem;
+}
+.level-up .level-container {
+  margin-top: 12rem;
+  display: flex;
+}
+.level-up .level-container img {
+  border-radius: 5px;
+}
+.level-up .level-container .lvl-flex-second {
+  margin-left: 6rem;
+}
+.level-up .level-container .lvl-flex-second h2 {
+  font-family: DM Sans;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 33px;
+  color: #606167;
+}
+.level-up .level-container .lvl-flex-second p {
+  margin-top: 2rem;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #979798;
+}
+.level-up .level-container .lvl-flex-second p span {
+  color: #606167;
+  font-family: DM Sans;
+  font-size: 21px;
+  font-weight: 550;
+  line-height: 23px;
+}
+.level-up .bottom-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.level-up .bottom-container .lvl-area {
+  padding: 2rem 1rem;
+  background-color: white;
+  width: 18rem;
+  border-radius: 15px;
+  display: block;
+  margin: 3rem auto;
+}
+.level-up .bottom-container .lvl-area h3 {
+  font-family: DM Sans;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #484b5e;
+}
+.level-up .bottom-container .lvl-area div {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.level-up .bottom-container .lvl-area div p {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #656569;
+}
+.level-up .bottom-container .lvl-area .select-p {
+  color: #979798;
+  font-family: DM Sans;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-top: 2rem;
+}
+.level-up .bottom-container .lvl-area button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid #9a9ca8;
+  width: 260px;
+  height: 50px;
+  margin-top: 1rem;
+}
+.level-up .bottom-container .lvl-area button:hover {
+  background-color: #efeffd;
+  border: 2px solid #6a5bcd;
+  cursor: pointer;
+}
+.level-up .bottom-container .lvl-area button input {
+  margin: 1rem;
+}
+.level-up .bottom-container .lvl-area button label {
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.level-up .bottom-container .lvl-area button label:hover {
+  cursor: pointer;
+}
+.level-up .bottom-container .lvl-area button label span {
+  font-family: DM Sans;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #979798;
+}
+.level-up .btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.level-up .btn-container button {
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  background-color: #e9e8ee;
+  color: #979798;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  border: none;
+  transition: 0.2s all ease-in-out;
+}
+.level-up .btn-container button:hover {
+  background-color: #6a5bcd;
+  color: white;
+  cursor: pointer;
+}
+@media only screen and (min-width: 300px) and (max-width: 620px) {
+  .level-container {
+    flex-direction: column;
+  }
+  .level-container .lvl-flex {
+    display: block;
+    margin: 0 auto;
+  }
+  .level-container .lvl-flex-second {
+    margin: 3rem;
+  }
+}

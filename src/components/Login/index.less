@@ -1,0 +1,195 @@
+@import "../../Utils/variables.less";
+
+.login-main {
+  padding: @page-left-right-paddings;
+  h2 {
+    padding-top: 11rem;
+    font-size: 32px;
+    color: #484B5E;
+  }
+  .paragraf {
+    padding-top: 1rem;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: #abacb4;
+  }
+  .main-area{
+    width: 30rem;
+  .type-select :nth-child(2) {
+    margin-left: 1rem;
+  }
+  .type-select {
+    display: flex;
+    border-bottom:2px solid #ABA9B7;
+    width: 9.6rem;
+    button {
+      font-size: 17px;
+      margin-top: 2rem;
+      background: none;
+      border: none;
+      color: #abacb4;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .p-email {
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #aba9b7;
+    padding-top: 2.5rem;
+  }
+  .email-input {
+    background-color: #eff3fa;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 4rem;
+    padding-left: 1rem;
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+  .password-container {
+    display: flex;
+    justify-content: space-between;
+    width: 66vmin;
+    div {
+      display: flex;
+      margin-top: 2rem;
+      align-items: center;
+      .show-password {
+        width: 20px;
+        height: 20px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      p {
+        padding-left: 1vmin;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: #aba9b7;
+      }
+      button {
+        font-family: DM Sans;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #6a5bcd;
+        background: none;
+        border: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .login-btn {
+    width: 100%;
+    height: 4rem;
+    margin-top: 2rem;
+    border: 2px solid #6a5bcd;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #6a5bcd;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      background-color: #6a5bcd;
+      cursor: pointer;
+      color: white;
+    }
+  }
+  .register-btn {
+    width: 100%;
+    height: 4rem;
+    margin-top: 1rem;
+    border: 2px solid #6a5bcd;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #6a5bcd;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      background-color: #6a5bcd;
+      cursor: pointer;
+      color: white;
+    }
+  }
+  .p-end {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    padding-left: 16vmin;
+    margin-top: 1rem;
+    color: #3c3621;
+  }
+  button.active {
+    color:#6a5bcd;
+    border-bottom: 3px solid #6a5bcd;
+  }
+  
+  .active-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: blue;
+  }
+  
+}
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .login-main{
+    h2{
+      font-size: 25px !important;
+    }
+  }
+  .main-area{
+    width: 86vmin !important;
+    .password-container{
+      width: auto !important;
+    }
+    .p-end{
+      padding: 0 !important;
+    }
+  }
+    .paragraf{
+      font-size: 18px !important;
+    }
+    .register-main{
+      .main{
+      width: 100% !important;
+      }
+      .code-input{
+        font-size: 12px !important;
+      }
+    }
+    
+}
+
+    @media only screen and (min-width: 601px) and (max-width: 800px) {
+    
+    
+    
+    }
+    
+    @media only screen and (max-width: 1040px) {
+    
+    }

@@ -1,0 +1,45 @@
+.about {
+  background-color: #f0f3fa;
+  padding: 7vmin;
+}
+.about .h3-about {
+  font-family: DM Sans;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4f4f53;
+}
+.about .p-about {
+  font-family: DM Sans;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #979798;
+  padding-top: 2rem;
+  width: 85%;
+}
+.about .h3-about2 {
+  font-family: DM Sans;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4f4f53;
+  padding-top: 2rem;
+}
+.about li {
+  font-family: DM Sans;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #979798;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}

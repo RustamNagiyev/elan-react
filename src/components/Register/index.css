@@ -1,0 +1,123 @@
+.register-main {
+  padding: 7vmin;
+}
+.register-main h2 {
+  margin-top: 10rem;
+  color: #484b5e;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.register-main .main {
+  width: 60%;
+}
+.register-main .main .p-email {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #aba9b7;
+  padding-top: 2.5rem;
+}
+.register-main .main .confirm-code {
+  display: flex;
+  align-items: center;
+}
+.register-main .main .confirm-code p {
+  margin-top: 2rem;
+  font-size: 18px;
+  border: 1px solid #e9e8ee;
+  border-radius: 5px;
+  margin-left: 2rem;
+  padding: 1.3rem;
+}
+.register-main .main .confirm-checkbox {
+  display: flex;
+  margin-top: 1rem;
+}
+.register-main .main .confirm-checkbox input {
+  width: 20px;
+  height: 20px;
+}
+.register-main .main .confirm-checkbox p {
+  color: #aba9b7;
+  padding-left: 1rem;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+}
+.register-main .main .confirm-checkbox p span {
+  color: #6a5bcd;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+}
+.register-main .main .login-btn {
+  width: 100%;
+  height: 4rem;
+  margin-top: 2rem;
+  border: 2px solid #6a5bcd;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #6a5bcd;
+  transition: 0.3s all ease-in-out;
+}
+.register-main .main .login-btn:hover {
+  background-color: #6a5bcd;
+  cursor: pointer;
+  color: white;
+}
+.register-main .main .register-btn {
+  width: 100%;
+  height: 4rem;
+  margin-top: 1rem;
+  border: 2px solid #6a5bcd;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #6a5bcd;
+  transition: 0.3s all ease-in-out;
+}
+.register-main .main .register-btn:hover {
+  background-color: #6a5bcd;
+  cursor: pointer;
+  color: white;
+}
+.register-main .main .p-end {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-top: 1rem;
+  color: #3c3621;
+}
+.register-main .email-input {
+  background-color: #eff3fa;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  font-size: 20px;
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+.register-main .code-input {
+  background-color: #eff3fa;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  font-size: 20px;
+  margin-top: 2rem;
+  padding-left: 1rem;
+}

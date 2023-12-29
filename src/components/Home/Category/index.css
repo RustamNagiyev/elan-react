@@ -1,0 +1,39 @@
+.categories {
+  padding: 7vmin;
+  background-color: #eff3fa;
+}
+.categories .h2-categories {
+  font-family: DM Sans;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #484b5e;
+  margin-top: 13rem;
+}
+.categories .card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: normal;
+}
+.categories .card .category {
+  width: 14.5rem;
+  padding-top: 5rem;
+  text-align: center;
+}
+.categories .card .category h3 {
+  font-size: 21px;
+  transition: 0.5s all ease-in-out;
+}
+.categories .card .category img {
+  transition: 0.5s all ease-in-out;
+}
+.categories .card .category:hover h3 {
+  color: #6a5bcd;
+  cursor: pointer;
+}
+.categories .card .category:hover img {
+  transform: scale(1.1);
+  cursor: pointer;
+}

@@ -1,0 +1,181 @@
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+import "./index.css";
+import { selectCategory } from "../../../categoryActions";
+
+const Premium = ({ data, title, selectedCategory, selectCategory }) => {
+  const [favoriteStates, setFavoriteStates] = useState([]);
+  const [selectedItemId, setSelectedItemId] = useState(null);
+  const [sortOption, setSortOption] = useState("Standart");
+  const [showAllData, setShowAllData] = useState(false); // Track whether to show all data
+  const numberOfCardsToShow = 14;
+
+  useEffect(() => {
+    setFavoriteStates(JSON.parse(localStorage.getItem("wishlistItems")) || []);
+  }, [selectedCategory]);
+
+
+  const handleFavoriteClick = (event, index, itemId) => {
+    event.preventDefault();
+
+    const itemExist = favoriteStates.includes(itemId);
+
+    if (itemExist) {
+      const updatedStates = favoriteStates.filter((id) => id !== itemId);
+      setFavoriteStates(updatedStates);
+      localStorage.setItem("wishlistItems", JSON.stringify(updatedStates));
+    } else {
+      setFavoriteStates((prev) => [...prev, itemId]);
+      localStorage.setItem(
+        "wishlistItems",
+        JSON.stringify([...favoriteStates, itemId])
+      );
+    }
+  };
+
+  const handleCardClick = (itemId) => {
+    setSelectedItemId(itemId);
+  };
+
+  const handleSortChange = (event) => {
+    setSortOption(event.target.value);
+  };
+
+  const handleShowAllData = () => {
+    setShowAllData((prevShowAllData) => !prevShowAllData);
+  };
+
+  const announcements = data;
+
+  const handleCategoryChange = (category) => {
+    selectCategory(category);
+    setSelectedItemId(null);
+  };
+
+  const filteredAnnouncements = announcements.filter((item) => {
+    if (sortOption === "En yeniler") {
+      return item.new === "true";
+    } else {
+      return true;
+    }
+  });
+
+  const sortedAnnouncements = filteredAnnouncements.sort((a, b) => {
+    if (sortOption == "Bahalıdan ucuza") {
+      return parseFloat(b.qiymet) - parseFloat(a.qiymet);
+    } else if (sortOption === "Ucuzdan bahalıya") {
+      return parseFloat(a.qiymet) - parseFloat(b.qiymet);
+    } else {
+      return 0;
+    }
+  });
+
+  // Slice the sortedAnnouncements array based on whether to show all data or not
+  const slicedAnnouncements = showAllData
+    ? sortedAnnouncements
+    : sortedAnnouncements.slice(0, numberOfCardsToShow);
+
+  return (
+    <section className="premium">
+      <div className="container-premium2">
+        <h2 className="h2-premium">{title} elanlar</h2>
+        <select value={sortOption} onChange={handleSortChange}>
+          <option value="Standart">Standart</option>
+          <option value="En yeniler">En yeniler</option>
+          <option value="Bahalıdan ucuza">Bahalıdan ucuza</option>
+          <option value="Ucuzdan bahalıya">Ucuzdan bahalıya</option>
+        </select>
+      </div>
+
+      <div className="container-premium">
+        <div className="card">
+          <div className="card3">
+            <img
+              className="img-crown"
+              src={require("../../../images/home/crown.svg").default}
+              alt="category"
+            />
+            <p className="p1">Elanını Premium et</p>
+            <p className="p2">
+              3 man<span className="span1"> / 5gün</span>
+            </p>
+            <button className="btn-premium" >Premium et</button>
+          </div>
+        </div>
+        {slicedAnnouncements.map((item, index) => {
+          const img =
+            Array.isArray(item.url) &&
+            require(`../../../images/home/${item.url[0]}`);
+          if (selectedCategory && item.category !== selectedCategory) {
+            return null;
+          }
+          return (
+            <NavLink to={`/adinside/${item.id}`} key={item.id}>
+              <div className="card" onClick={() => handleCardClick(item.id)}>
+                <div className="card2">
+                  <div className="flip-box-front">
+                    <img
+                      className="img-premium"
+                      src={(Array.isArray(item.url) && img) || item.url}
+                      alt="elan"
+                    />
+                    <div className="card-bottom">
+                      <h3 className="h3-premium">{item.announcementname}</h3>
+                      <p className="p-premium">Yer: {item.city}</p>
+                      <p className="p-premium">Vaxt: {item.time}</p>
+                      <div>
+                        <p className="price-premium">Qiymət: {item.price}</p>
+                        <img
+                          src={
+                            require("../../../images/home/manaticon1.svg")
+                              .default
+                          }
+                          alt="watch"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flip-box-back">
+                    <h2>Daha ərtaflı</h2>
+                    <img
+                      src={
+                        favoriteStates.includes(item.id)
+                          ? require("../../../images/home/heart-red.svg")
+                              .default
+                          : require("../../../images/home/heart-primary.svg")
+                              .default
+                      }
+                      alt="fav"
+                      onClick={(event) =>
+                        handleFavoriteClick(event, index, item.id)
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </NavLink>
+          );
+        })}
+      </div>
+
+      <button className="allsee" onClick={() => handleShowAllData()}>
+        {showAllData ? "Gizlə" : `${title} elanların hamısını göstər`}
+      </button>
+    </section>
+  );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    selectedCategory: state.category.selectedCategory,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    selectCategory: (category) => dispatch(selectCategory(category)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Premium);
